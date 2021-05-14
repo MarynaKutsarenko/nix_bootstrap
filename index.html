@@ -7,38 +7,235 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Course Bootstrap</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="/css/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-   <header class="header">
+   <header class="header fixed-top">
       <div class="container">
 
-         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary ">
             <a href="#" class="navbar-brand pr-5">
                <img src="/images/logo.png" alt="logo" class="logo img-fluid rounded-circle" width="100" />
             </a>
 
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggle-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
                <ul class="navbar-nav float-right ">
-                  <li class="nav-item active pl-2 pr-2 mr-5 Default shadow"><a href="#" class="nav-link">Проекты</a></li>
-                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#" class="nav-link">Мы по тому что </a></li>
-                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#" class="nav-link">Обратная связь</a></li>
+                  <li class="nav-item active pl-2 pr-2 mr-5 Default shadow"><a href="#projects"
+                        class="nav-link">Проекты</a></li>
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#about" class="nav-link">Мы по тому что
+                     </a>
+                  </li>
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#callBack" class="nav-link">Обратная
+                        связь</a>
+                  </li>
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#" class="nav-link" title="доп страница"
+                        data-toggle="popover" data-trigger="hover" data-content="кликни на меня ;)">Доп страница</a>
+                  </li>
                </ul>
             </div>
          </nav>
 
       </div>
    </header>
+   <section class="d-inline-block pt-5"></section>
+   <section class="inline-block pt-5"></section>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+   <section class="projects pt-5 mb-5">
+      <div class="container">
+         <h1 id="projects" class="mb-5 text-center">Проекты</h1>
+         <div id="my-carousel" class="carousel slide shadow-lg mx-auto w-75" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li class="active " data-target="#my-carousel" data-slide-to="0" aria-current="location"></li>
+               <li data-target="#my-carousel" data-slide-to="1"></li>
+               <li data-target="#my-carousel" data-slide-to="2"></li>
+               <li data-target="#my-carousel" data-slide-to="3"></li>
+               <li data-target="#my-carousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img class="d-block w-100 " src="/images/img_1.jpeg" alt="photo of project" height="250" />
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5 class="text-danger">Managment project</h5>
+                     <p class="text-dark">Descriptions</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100 " src="/images/imag_2.jpeg" alt="photo of project" height="250" />
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5 class="text-danger">Zoho project</h5>
+                     <p class="text-danger">Descriptions</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="/images/img_3.jpeg" alt="photo of project" height="250" />
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5 class="text-primary">Team project</h5>
+                     <p class="text-primary">Descriptions</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="/images/img_4.jpeg" alt="photo of project" height="250" />
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5 class="text-danger">Best solution project</h5>
+                     <p class="text-danger">Descriptions</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="/images/img_5.jpeg" alt="photo of project" height="250" />
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5>Future project</h5>
+                     <p>Descriptions</p>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my-carousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+               </a>
+               <a class="carousel-control-next" href="#my-carousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+               </a>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <section class="about mb-5 ">
+      <div class="container">
+         <h1 id="about" class="mb-5 text-center">C нами удобно работать</h1>
+
+         <div id="accordion" class="mx-auto w-75">
+
+            <div class="card shadow bg-dark text-warning">
+               <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                     По договору
+                  </a>
+               </div>
+               <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                  <div class="card-body">Предоставлю все документы для бухгалтерии: договоры, счета и акты.Работаю как
+                     ИП без НДС.</div>
+               </div>
+            </div>
+
+            <div class="card shadow">
+               <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                     Точно в срок
+                  </a>
+               </div>
+               <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                     В договоре прописана моя ответственность за срок проекта. Если просрочу —
+                     плачу неустойку.
+                  </div>
+               </div>
+            </div>
+
+            <div class="card shadow bg-dark text-warning">
+               <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                     Ценник под вас
+                  </a>
+               </div>
+               <div id="collapseThree" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                     Если у вас нетиповой проект, сделаю рассчет цены за работу и объясню, как
+                     складывается цена.
+                  </div>
+               </div>
+            </div>
+            <div class="card shadow">
+               <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                     Хостинг и домен
+                  </a>
+               </div>
+               <div id="collapseFour" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                     Если мы договорились о цене проекта, в неё входит всё: домен и хостинг на год + SSL сертификат.
+                  </div>
+               </div>
+            </div>
+            <div class="card shadow bg-dark text-warning">
+               <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                     !бросим после
+                  </a>
+               </div>
+               <div id="collapseFive" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                     Научу вас или вашего сотрудника пользоваться сайтом, запишу видео-инструкции.
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <section class="callBack mb-5">
+      <div class="container">
+         <h1 id="callBack" class="mb-5 text-center">Свяжитесь со мной ;)</h1>
+
+         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="modal">Здраствуйте )</h5>
+                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <div class="container-fluid">
+                        <p>Сохранить Вашу информацию ?</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <form class="mx-auto w-75">
+            <div class="form-group">
+               <label for="inputName">Your name : </label>
+               <input id="inputName" class="form-control" type="text" placeholder="Name">
+            </div>
+            <div class="form-group">
+               <label for="inputEmail">Email : </label>
+               <input id="inputEmail" class="form-control" type="email" aria-describedby="emailHelp"
+                  placeholder="Email">
+            </div>
+            <div class="form-group">
+               <label for="inputPassword">Password :</label>
+               <input id="nputPassword" class="form-control" type="password" placeholder="Password">
+            </div>
+            <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#modal">Отправить</button>
+         </form>
+      </div>
+   </section>
+
+   <footer class="footer pt-5 mb-5 shadow">
+      <div class="container ">
+         <a class="mb-3 mr-3 d-inline-block" href="mailto:marina.kutsarenko@gmail.com"><img src="/images/at.svg"
+               alt="email"> _напиши мне )</a>
+         <a class="mr-3 d-inline-block" href="tel:+380669706659"><img src="images/telephone-forward.svg" alt="call">
+            _позвони мне )</a>
+         <a class="d-inline-block" href="#"><img src="images/emoji-smile-upside-down.svg" alt="smile">
+            _улыбнись)</a>
+      </div>
+      <div class="footer-copirate float-right pt-3 pb-3">Марина Куцаренко © 2021</div>
+   </footer>
+
+   <script src="js/main.js"></script>
 </body>
 
 </html>

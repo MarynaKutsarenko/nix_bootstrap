@@ -1,0 +1,44 @@
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] .navbar-toggle-icon {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] a {
+  color: #eee !important;
+}
+
+[data-theme="dark"] a.active {
+  color: rgb(231, 198, 7) !important;
+}
+
+[data-theme="dark"] a.card-link {
+  color: rgb(59, 44, 44) !important;
+}
+
+[data-theme="dark"] .card-body {
+  color: rgb(113, 102, 212) !important;
+}
+
+[data-theme="dark"] img.svgimg  {
+  background: rgb(238, 204, 13) !important;
+}
+
+[data-theme="dark"] .modal {
+  color: #000 !important;
+}

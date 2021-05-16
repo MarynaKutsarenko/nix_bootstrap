@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Course Bootstrap</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/css/dark-mode.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -16,41 +17,56 @@
    <header class="header fixed-top">
       <div class="container">
 
-         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary ">
-            <a href="#" class="navbar-brand pr-5">
-               <img src="/images/logo.png" alt="logo" class="logo img-fluid rounded-circle" width="100" />
+         <nav class="navbar navbar-expand-lg  bg-white " role="navigation">
+            <a href="/index.html" class="navbar-brand pr-5">
+               <img src="/images/logo.png" alt="logo" class="logo img-fluid rounded-circle border border-warning mb-2"
+                  width="100" />
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggle-icon"></span>
+            <button class="navbar-toggler p-2" type="button" data-toggle="collapse"
+               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span class="navbar-toggle-icon p-2 rounded">MENU</span>
             </button>
 
-            <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
-               <ul class="navbar-nav float-right ">
-                  <li class="nav-item active pl-2 pr-2 mr-5 Default shadow"><a href="#projects"
-                        class="nav-link">Проекты</a></li>
-                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#about" class="nav-link">Мы по тому что
+            <div class="collapse navbar-collapse pl-5  text-primary" id="navbarSupportedContent">
+               <ul class="navbar-nav float-right">
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#projects"
+                        class="nav-link active scroll-to">Проекты</a></li>
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#about" class="nav-link text-primary scroll-to">Мы
+                        по тому что
                      </a>
                   </li>
-                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#callBack" class="nav-link">Обратная
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="#callBack"
+                        class="nav-link text-primary scroll-to">Обратная
                         связь</a>
                   </li>
-                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow"><a href="/addPage.html" target="_blank" class="nav-link" title="доп страница"
-                        data-toggle="popover" data-trigger="hover" data-content="кликни на меня ;)">Доп страница</a>
+                  <li class="nav-item pl-2 pr-2 mr-5 Default shadow text-primary"><a href="/addPage.html"
+                        target="blank" class="nav-link scroll-to" title="доп страница" data-toggle="popover" data-trigger="hover"
+                        data-content="кликни на меня ;)">Доп страница</a>
                   </li>
                </ul>
             </div>
          </nav>
          
+         <div class="custom-control custom-switch bg-white">
+            <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+            <label class="custom-control-label" for="darkSwitch">Dark Theme</label>
+         </div>
+
          <div class="progress">
-            <div id="progress" class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="progress" class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuemin="0"
+               aria-valuemax="100"></div>
          </div>
 
       </div>
    </header>
    <section class="d-inline-block pt-5"></section>
-   <section class="inline-block pt-5"></section>
+
+   <section class="inline-block pt-5">
+      <div class="container pt-5">
+      </div>
+   </section>
 
 
    <section class="projects pt-5 mb-5">
@@ -118,7 +134,7 @@
 
          <div id="accordion" class="mx-auto w-75">
 
-            <div class="card shadow bg-dark text-warning">
+            <div class="card shadow ">
                <div class="card-header">
                   <a class="card-link" data-toggle="collapse" href="#collapseOne">
                      По договору
@@ -144,7 +160,7 @@
                </div>
             </div>
 
-            <div class="card shadow bg-dark text-warning">
+            <div class="card shadow ">
                <div class="card-header">
                   <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
                      Ценник под вас
@@ -169,7 +185,7 @@
                   </div>
                </div>
             </div>
-            <div class="card shadow bg-dark text-warning">
+            <div class="card shadow ">
                <div class="card-header">
                   <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
                      !бросим после
@@ -220,8 +236,10 @@
             </div>
             <div class="form-group">
                <label for="inputPhone">Phone Number:</label>
-               <input id="inputPhone" class="form-control" type="phone" placeholder="phone number" aria-describedby="inputPhone" oninput="handler(this)"/>
-               <span id="inputPhone" class="text-muted "><small class="text-danger">Введите Ваш номер телефона используя только цифры!</small></span>
+               <input id="inputPhone" class="form-control" type="phone" placeholder="phone number"
+                  aria-describedby="inputPhone" oninput="handler(this)" />
+               <span id="inputPhone" class="text-muted "><small class="text-danger">Введите Ваш номер телефона используя
+                     только цифры!</small></span>
             </div>
             <a data-toggle="modal" data-target="#modal"><button class="btn btn-primary">Отправить</button></a>
          </form>
@@ -231,17 +249,20 @@
    <footer class="footer pt-5 mb-5 shadow">
       <div class="container ">
          <a class="mb-3 mr-3 d-inline-block" href="mailto:marina.kutsarenko@gmail.com"><img src="/images/at.svg"
-               alt="email"> _напиши мне )</a>
-         <a class="mr-3 d-inline-block" href="tel:+380669706659"><img src="images/telephone-forward.svg" alt="call">
+               alt="email" class="svgimg p-1 rounded-circle"> _напиши мне )</a>
+         <a class="mr-3 d-inline-block" href="tel:+380669706659"><img src="images/telephone-forward.svg" alt="call"
+               class="svgimg p-1 rounded-circle">
             _позвони мне )</a>
-         <a class="d-inline-block" href="#"><img src="images/emoji-smile-upside-down.svg" alt="smile">
-            _улыбнись)</a>
+         <a id="getInfo" class="d-inline-block" href="#"><img src="images/emoji-smile-upside-down.svg" alt="smile"
+               class="svgimg p-1 rounded-circle">
+            _получить info о браузере</a>
       </div>
       <div class="footer-copirate float-right pt-3 pb-3">Марина Куцаренко © 2021</div>
    </footer>
 
 
    <script src="/js/bootstrap-validate.js"></script>
+   <script src="js/dark-mode-switch.js"></script>
    <script src="js/main.js"></script>
 
 </body>
